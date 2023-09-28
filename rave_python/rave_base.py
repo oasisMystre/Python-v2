@@ -115,7 +115,7 @@ class RaveBase(object):
         # If we are using environment variables to store secretKey
         if (usingEnv):
             self.__publicKey = publicKey
-            self.__secretKey = os.getenv("RAVE_SECRET_KEY", None)
+            self.__secretKey = os.environ.get("RAVE_SECRET_KEY", None)
 
             if (not self.__publicKey) or (not self.__secretKey):
                 raise ValueError(

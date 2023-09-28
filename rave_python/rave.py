@@ -7,7 +7,6 @@ from rave_python.rave_ghmobile import GhMobile
 from rave_python.rave_mpesa import Mpesa
 from rave_python.rave_paymentplan import PaymentPlan
 from rave_python.rave_preauth import Preauth
-from rave_python.rave_base import RaveBase
 from rave_python.rave_recipient import Recipient
 from rave_python.rave_rwmobile import RWMobile
 from rave_python.rave_settlement import Settlement
@@ -27,7 +26,7 @@ from rave_python.rave_tzmobile import TZSMobile
 
 class Rave:
 
-    def __init__(self, publicKey, secretKey, production=False, usingEnv=True):
+    def __init__(self, publicKey, secretKey = None, production=False, usingEnv=True):
         """ This is main organizing object. It contains the following:\n
             rave.Account -- For bank account transactions\n
             rave.BankTransfer -- For pay with bank transfer transaction\n
